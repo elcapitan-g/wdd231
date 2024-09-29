@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #36454f;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+}
+
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+
+nav#main-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav#main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+nav#main-nav a:hover {
+    background-color: #555;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+figure {
+    text-align: center;
+    margin: 0; 
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+figure:hover img {
+    transform: scale(1.1); 
+}
+
+figure figcaption {
+    margin-top: 10px;
+}
+
+
+footer {
+    background-color: #36454f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+@media (max-width: 767px) {
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    #nav-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px; 
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+
+    #main-nav {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        right: 20px; 
+        background-color: #36454f;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #main-nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 10px;
+    }
+
+    #main-nav.slide {
+        animation: slide-down 0.3s ease forwards;
+    }
+    
+    @keyframes slide-down {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #34495e; 
+    --secondary-color: #fff; 
+    --background-color: #f2f2f2; 
+    --box-background: rgba(255, 255, 255, 0.9); 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f2f2f2; 
+    height: 100%; 
+}
+
+header {
+    background-color: #34495e; 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0; 
+}
+
+main {
+    position: relative; 
+    padding: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.hero {
+    width: 100%;
+    height: 100%; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.box {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid #ccc;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.box.data {
+    left: 80px; 
+    width: calc(50% - 40px); 
+    max-width: 600px; 
+}
+
+.box.weather {
+    right: 80px; 
+    text-align: left; 
+    width: calc(50% - 40px); 
+    max-width: 400px; 
+}
+
+.box h2 {
+    position: relative; 
+    text-align: center;
+    background-color: #34495e; 
+    color: #fff;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.weather img {
+    max-width: 30px; 
+    height: auto;
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+footer {
+    background-color: #34495e; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .box {
+        position: static; 
+        transform: none; 
+        margin-top: 20px; 
+        width: 100%; 
+        max-width: 100%; 
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+
+    .box.data {
+        left: 0; 
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+    .box.weather {
+        right: 0; 
+        width: 100%;
+        max-width: 100%; 
+    }
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}

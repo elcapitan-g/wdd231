@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Gerald Newell</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Gerald Newell, Web development, Hawaii">
-    <meta name="author" content="Gerald">
-    <link rel="stylesheet" href="styles/shark.css">
-    <link rel="stylesheet" href="styles/shark-large.css" media="(min-width: 768px)">
+    <title>WDD 231 | Gerald Newell | Homepage</title>
+    <meta name="author" content="Gerald Newell">
+    <meta name="description" content="WDD 231 - Web Frontend Development | Gerald Newell | Homepage">
+    
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    
+    <script src="scripts/dates.js" defer></script>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    
+    <link rel="icon" href="favicon.ico">
+
+    
+    <meta property="og:title" content="Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Gerald Newell Homepage for WDD 231">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/01/01/20/30/hawaii-1945486_1280.jpg">
+    <meta property="og:url" content="https://el-capitan.github.io/wdd231/index.html">
 </head>
-
-       <body>
-        <header>
-            <img src="images/logo.png" alt="Hawaii Shark Logo" id="logo">
-            <h1>Hawaii Sharks</h1>
-            <nav id="main-nav">
-                <a href="index.html">Home</a>
-                <a href="shark-about.html">About</a>
-                <a href="shark-gallery.html">Gallery</a>
-            </nav>
-            <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-        </header>
-        <div class="=content">
-        <main>
-            <div class="hero2">
-                <article>
-                    <h1> Welcome to Hawaii Sharks</h1>
-                    
-                    <img src="images/homes.jpg" alt="home">
-                    </article>
+<body>
+    <header>
+        <img src="images/gerald.webp" alt="Gerald Newell Profile" width="100" height="100">
+        <h1>Gerald Newell</h1>
+        <button id="hamburgerMenu" title="Menu button" aria-label="Toggle navigation"></button>
+  
+    
+    <nav>
+        <ul class="navLinks">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="./chamber/index.html">Chamber</a></li>
+            <li><a href="#">GitHub Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </nav>
+      </header>
+    <main>
+        <section class="two-columns">
+            <div class="course-work">
+                <h2>Course Work</h2>
+                <div class="dots">
+                    <p>•Course 1<br>•Course 2<br>•Course 3</p>
+                </div>
             </div>
-            <br>
-            
+            <div class="location">
+                <h2>Kawaihae, Hawaii</h2>
+                <figure>
+                    <img src="images/kohala.webp" alt="Kohala scenery" width="200" height="133">
+                    <figcaption>Kohala Coast</figcaption>
+                </figure>
+            </div>
+        </section> 
 
-           
-
-            
-           
-        </main>
-        </div>
-
-        <footer>
-            <p>&copy; <span id="copyright-year"></span> 🤙 Gerald Newell 🤙 Kawaihae, Hawaii</p>
-            <p> Last Modified: <span id="last-modified"></span></p>
-        </footer>
+        <section class="course-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="courses">
+                <button id="all" class="all">ALL</button>
+                <button id="cse" class="cse">CSE</button>
+                <button id="wdd" class="wdd">WDD</button>
+            </div>
+            <div class="modalPractice">
+                <dialog id="course-details"></dialog>
+                <div id="courseList"></div>
+            </div>
+            <div id="totalCredits">Total Credits: <span id="creditCount">0</span></div>
+        </section>
+    </main>
     
-        <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/shark-gallery.js" defer></script>
-    </body>
-    </html>
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> 🤙 Gerald Newell 🤙 Hawaii, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
     
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    
+</body>
+</html>

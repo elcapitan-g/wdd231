@@ -1,0 +1,45 @@
+
+header {
+    padding: 20px;
+}
+
+nav#main-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav#main-nav a {
+    padding: 10px 15px;
+}
+
+
+footer {
+    padding: 20px;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+}
+
+figure {
+    text-align: center;
+    margin: 0; 
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+figure:hover img {
+    transform: scale(1.1); 
+}
+figure figcaption {
+    margin-top: 10px;
+}
+
