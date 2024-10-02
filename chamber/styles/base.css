@@ -1,0 +1,225 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0077cc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    border-radius: 50%;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #000000;
+}
+
+
+.two-column-layout {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.current-events {
+    background-image: url('images/statue.webp'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    position: relative;
+}
+
+.current-events h2 {
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.weather-info {
+    flex: 1; 
+    background-color: white; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+}
+
+footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 8px;
+}
+
+footer .contact-section {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        display: none; 
+        width: 100%; 
+    }
+
+    .navLinks.active {
+        display: flex; 
+    }
+
+    #hamburgerMenu {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        position: relative;
+    }
+    
+    #hamburgerMenu::before,
+    #hamburgerMenu::after,
+    #hamburgerMenu div {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px; 
+        background-color: white;
+        transition: all 0.3s ease; 
+    }
+    
+    #hamburgerMenu div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .cta {
+        width: 90%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .two-column-layout {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        display: block;
+    }
+
+    .navLinks {
+        display: flex; 
+    }
+
+    #hamburgerMenu {
+        display: none; 
+    }
+
+    .footer-top {
+        flex-direction: row;
+    }
+}
+.membersContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list {
+    display: block;
+}
+
+.member-card {
+    flex: 1 1 calc(25% - 20px); 
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-view .member-card {
+    flex: 1 1 calc(33.33% - 20px); 
+}

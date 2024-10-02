@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waimea Town Chamber of Commerce</title>
+    <meta name="author" content="Gerald Newell">
+    <meta name="description" content="The home page for Waimea Town Chamber of Commerce">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../favicon.ico">
+    <script src="scripts/members.js"></script>
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Chamber of Commerce members directory">
+    <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/chamber/index.html">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" width="35" height="35">
+        <h1>Waimea Town Chamber of Commerce</h1>
+        <button id="hamburgerMenu" title="Menu button"></button>
+   
+    
+    <nav>
+        <ul class="navLinks">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="directory-main">
+    <h2 class="directory-header">Member Directory</h2>
+
+    <div class="directory-buttons">
+        <button id="grid-button" class="active button"><img src="images/menu.png" alt="menu button icon" width="44" height="44" title="menu button"></button>
+        <button id="list-button" class="button"><img src="images/list.png" alt="list button icon" width="44" height="44" title="list button"></button>
+    </div>
+
+    <div id="member-directory" class="grid"></div>
+</main>
+
+
+    <footer>
+        <div class="footer-top">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo" width="100" height="100">
+            </div>
+
+            <div class="contact-section">
+                <h3><strong>Waimea Town Chamber of Commerce</strong></h3>
+                <address>
+                    64-1032 Mamalahoa Hwy,<br>
+                    Waimea, Hawaii<br>
+                    96743<br>
+                    <br>Phone: <a href="tel:1234567890">(808) 123-4567</a>
+                </address>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="60" height="60"></a>
+                <a href="https://www.x.com" target="_blank"><img src="images/x.jpg" alt="X " width="60" height="60"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instgram.png" alt="Instagram" width="60" height="60"></a>
+            </div>
+        </div>
+
+        <p>&copy; <span id="currentYear"></span> 🤙 Gerald Newell 🤙 Hawaii, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/members.js"></script>
+    <script src="../scripts/dates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+   
+    
+</body>
+</html>

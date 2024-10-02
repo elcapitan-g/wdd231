@@ -1,0 +1,74 @@
+{
+    "members": [
+        {
+            "name": "Waimea Coffee Company",
+            "address": "123 Coffee St, Waimea",
+            "phone": "808-555-1234",
+            "website": "www.waimeacoffee.com",
+            "image": "waimeacoffee.webp",
+            "memberLevel": "Gold",
+            "business": "Coffee Shop",
+            "ceoImage": "1.webp"
+        },
+        {
+            "name": "Waimea Hardware Store",
+            "address": "456 Tool Ave, Waimea",
+            "phone": "808-555-5678",
+            "website": "www.waimeahardware.com",
+            "image": "waimeahardware.webp",
+            "memberLevel": "Gold",
+            "business": "Hardware",
+            "ceoImage": "2.webp"
+        },
+        {
+            "name": "Waimea Travel Agency",
+            "address": "789 Adventure Blvd, Waimea",
+            "phone": "808-555-9101",
+            "website": "www.waimeatravel.com",
+            "image": "waimeatravel.webp",
+            "memberLevel": "Silver",
+            "business": "Travel",
+            "ceoImage": "3.webp"
+        },
+        {
+            "name": "Waimea Sports Gear",
+            "address": "101 Sports St, Waimea",
+            "phone": "808-555-1122",
+            "website": "www.waimeasports.com",
+            "image": "waimeasports.webp",
+            "memberLevel": "Silver",
+            "business": "Sporting Goods",
+            "ceoImage": "4.webp"
+        },
+        {
+            "name": "Waimea Floral Designs",
+            "address": "202 Flower Rd, Waimea",
+            "phone": "808-555-3344",
+            "website": "www.waimeafloral.com",
+            "image": "waimeafloral.webp",
+            "memberLevel": "Bronze",
+            "business": "Florist",
+            "ceoImage": "5.webp"
+        },
+        {
+            "name": "Waimea Community Health Center",
+            "address": "303 Health Ave, Waimea",
+            "phone": "808-555-5566",
+            "website": "www.waimeacommunityhealth.org",
+            "image": "waimeahealth.webp",
+            "memberLevel": "NP",
+            "business": "Non-Profit Organization",
+            "ceoImage": "6.webp"
+        },
+        {
+            "name": "Waimea Pet Supplies",
+            "address": "404 Pet Lane, Waimea",
+            "phone": "808-555-7788",
+            "website": "www.waimeapets.com",
+            "image": "waimeapets.webp",
+            "memberLevel": "Silver",
+            "business": "Pet Supplies",
+            "ceoImage": "7.webp"
+        }
+    ]
+}
