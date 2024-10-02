@@ -178,7 +178,7 @@ footer .contact-section {
     }
 
     .two-column-layout {
-        flex-direction: column; /* Stack sections on smaller screens */
+        flex-direction: column; 
     }
 }
 
