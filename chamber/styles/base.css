@@ -65,10 +65,15 @@ main {
     background-color: #0077cc;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 14px; 
+    line-height: normal;  
+    height: auto;         
+    display: inline-flex; 
+    align-items: center;  
 }
 
 .cta:hover {
@@ -83,18 +88,30 @@ main {
 }
 
 .current-events {
-    background-image: url('images/statue.webp'); 
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
+    flex: 1; 
+    background-color: white; 
     border-radius: 8px;
-    color: white;
-    position: relative;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .current-events h2 {
     margin-bottom: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.spotlights {
+    width: 86%;
+    height: auto;
+    border: 1px solid lightgray;    
+    margin: 30px;
+    background-color: white;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spotlights h3 {
+    font-size: larger;
 }
 
 .weather-info {

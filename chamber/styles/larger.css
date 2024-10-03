@@ -105,9 +105,7 @@
     }
 
 
-    .cta {
-        top: 0%; 
-    }
+
 
 
     .home-main section {
@@ -155,5 +153,27 @@
 
     .spotlight h2 {
         grid-column: 1 / -1; 
+    }
+    .cta {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        padding: 5px 10px; 
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 14px; 
+        line-height: normal;  
+        height: auto;       
+        display: inline-flex; 
+        align-items: center;  
+    }
+    
+    .cta:hover {
+        background-color: #000000;
     }
 }

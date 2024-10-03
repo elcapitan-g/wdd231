@@ -4,16 +4,7 @@ const listButton = document.querySelector('#list-button');
 const imgBase = 'images/';
 const membersURL = 'data/members.json';
 
-async function getMembers() {
-    const dummyData = {
-        members: [
-            { name: "Member 1", image: "member1.jpg", address: "123 Main St", website: "www.member1.com", phone: "(555) 555-5555", business: "Business Name", memberLevel: "Gold" },
-            { name: "Member 2", image: "member2.jpg", address: "456 Elm St", website: "www.member2.com", phone: "(555) 555-5556", business: "Another Business", memberLevel: "Silver" }
-        ]
-    };
-    console.log('Fetched members:', dummyData.members); // Log fetched data
-    displayMembers(dummyData.members);
-}
+
 
 function displayMembers(data) {
     directoryList.innerHTML = "";
@@ -23,7 +14,7 @@ function displayMembers(data) {
 
         data.forEach((member) => {
             let cards = document.createElement('div');
-            cards.classList.add('member-card'); // Add this line
+            cards.classList.add('member-card'); 
             let companyCard = document.createElement('img');
             companyCard.setAttribute('src', imgBase + member.image);
             companyCard.setAttribute('alt', `Business card for ${member.name}`);
