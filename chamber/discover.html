@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Chamber of Commerce members directory">
     <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/chamber/index.html">
-\
+
 </head>
 <body>
     <header>
@@ -34,43 +34,40 @@
         </ul>
     </nav>
 </header>
-    <main class="home-main">
-        <div class="hero">
-            <picture>
-                <source media="(max-width: 200px)" srcset="images/waimea.jpg">
-                <img src="images/waimea.jpg" alt=" Picture of Waimea Town" width="500" height="200" loading="lazy">
-            </picture>
-            <button class="cta" onclick="window.location.href='join.html'" title="Join button">E como mai!</button>
-        </div>
+<main>
+    <div id="welcome">
+        <p></p>
+    </div>
+    <div id="container">
+        <article id="sidebar-content">
+            <section id="founder">
+                <h2>Founder. Capitan G</h2>
+                <figure>
+                    <img src="images/newell.png" alt="newell" width="450" height="600" loading="lazy">
+                    <figcaption>Capitan G</figcaption>
+                </figure>
+                <p>
 
-        <div class="two-column-layout">
-            <section class="current-events">
-                <h2>Events</h2>
-                <p id="current-paragraph">Lorem ipsum dolor sit...</p>
+blah blah blah                </p>
             </section>
-    
-            <section class="weather-info">
-                <h2>Local Weather</h2>
-                <div class="current">
-                    <h3 id="current-heading">Current Weather</h3>
-                    <p id="current-temp"></p>
-                    <figure>
-                        <img id="weather-icon" src="#" alt="Weather icon" width="50" height="50">
-                        <figcaption></figcaption>
-                    </figure>
+            <hr>
+           
+            </div>
+            <hr>
+            <div id="logo-presentation">
+                <h2>Our Logo</h2>
+                <div class="logo-conatiner">
+                    <img src="images/waimea-logo.jpeg" alt="logo-webchamber" width="300" height="300" loading="lazy">
                 </div>
-                <div class="weather-forecast"></div>
-                
-            </section>
-        </div>
-
-        <section class="spotlight">
-            <h2>A Special Thanks To</h2>
-            <div class="spotlights"></div>
-            <div class="spotlights"></div>
-            <div class="spotlights"></div>
+            </div>
+        </article>
+        <hr>
+        <section class="collage">
+            <h3>About ourselves</h3>
+            
         </section>
-    </main>
+    </div>
+</main>
 
     <footer>
         <div class="footer-top">
@@ -102,6 +99,6 @@
     <script src="../scripts/dates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/hamburger.js"></script>
-    <script src="scripts/spotlight.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
 </body>
 </html>
