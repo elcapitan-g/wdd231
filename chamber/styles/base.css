@@ -197,7 +197,7 @@ footer .contact-section {
     .two-column-layout {
         flex-direction: column; 
     }
-}
+
 
 @media (min-width: 769px) {
     nav {
@@ -228,7 +228,27 @@ footer .contact-section {
 .list {
     display: block;
 }
+#member-directory {
+    display: flex; /* or grid, depending on your design */
+    flex-wrap: wrap; /* if using flexbox */
+}
 
+.information {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    #member-directory {
+        display: flex; /* Can also switch to grid if desired */
+        flex-direction: column; /* Stack on small screens */
+    }
+    
+    .member-card {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
 .member-card {
     flex: 1 1 calc(25% - 20px); 
     margin: 10px;
@@ -239,4 +259,5 @@ footer .contact-section {
 
 .grid-view .member-card {
     flex: 1 1 calc(33.33% - 20px); 
+}
 }

@@ -16,7 +16,6 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Chamber of Commerce members directory">
     <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/chamber/index.html">
-\
 </head>
 <body>
     <header>
@@ -34,42 +33,77 @@
         </ul>
     </nav>
 </header>
-    <main class="home-main">
-        <div class="hero">
-            <picture>
-                <source media="(max-width: 200px)" srcset="images/waimea.jpg">
-                <img src="images/waimea.jpg" alt=" Picture of Waimea Town" width="500" height="200" loading="lazy">
-            </picture>
-            <button class="cta" onclick="window.location.href='join.html'" title="Join button">E como mai!</button>
-        </div>
-
-        <div class="two-column-layout">
-            <section class="current-events">
-                <h2>Events</h2>
-                <p id="current-paragraph">Lorem ipsum dolor sit...</p>
-            </section>
-    
-            <section class="weather-info">
-                <h2>Local Weather</h2>
-                <div class="current">
-                    <h3 id="current-heading">Current Weather</h3>
-                    <p id="current-temp"></p>
-                    <figure>
-                        <img id="weather-icon" src="#" alt="Weather icon" width="50" height="50">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-                <div class="weather-forecast"></div>
-                
-            </section>
-        </div>
-
-        <section class="spotlight">
-            <h2>A Special Thanks To</h2>
-            <div class="spotlights"></div>
-            <div class="spotlights"></div>
-            <div class="spotlights"></div>
+    <main >
+        <div id="form">
+            <form method="get" class="form1" action="mahalo.html">
+                <fieldset id="personal-information">
+                    <legend>Personal Information</legend>
+                    <label class="required" for="first-name">First Name:</label>
+                    <input type="text" autocomplete="given-name" name="first-name" id="first-name" required title="First Name">
+        
+                    <label class="required" for="last-name">Last Name:</label>
+                    <input type="text" autocomplete="family-name" name="last-name" id="last-name" required title="Last Name">
+        
+                    <label class="required" for="email">Email Address:</label>
+                    <input type="email" autocomplete="email" name="email" id="email" required placeholder="example@gmail.com" title="Your Email Address">
+        
+                    <label class="required" for="phone-number">Phone Number:</label>
+                    <input type="tel" autocomplete="tel" name="phone-number" id="phone-number" required placeholder="+(808) 123-4567" title="Your phone Number with country code">
+                </fieldset>
+        
+                <fieldset id="business-information">
+                    <legend>Business Information</legend>
+                    <label class="required" for="organizational-title">Organization Title:</label>
+                    <input type="text" id="organizational-title" name="organizational-title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" title="Only accepts alpha characters, hyphens, and spaces with a minimum of seven characters" required>
+        
+                    <label class="required" for="business-name">Business or Organization Name:</label>
+                    <input type="text" id="business-name" name="business-name" autocomplete="organization" title="Name of the Organization" required>
+        
+                    <label for="description-business">Description:</label>
+                    <textarea title="Description of the business" name="description-business" id="description-business" placeholder="Brief Description"></textarea>
+                </fieldset>
+        
+                <fieldset id="membership-level">
+                    <legend>Membership Selection</legend>
+                    <label class="required" for="membership">Choose a membership level:</label>
+                    <select id="membership" name="membership" title="Membership Levels">
+                        <option value="">--Please choose an option--</option>
+                        <optgroup label="Membership Levels">
+                            <option value="np">NP</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </optgroup>
+                    </select>
+                    <h2 id="title-memberships">Types of Memberships</h2>
+                    <section id="details-memberships"><script>
+                        const membershipInfo = {
+                            np: "Non-Profit Membership: This level is for non-profit organizations, providing basic access to resources.",
+                            bronze: "Bronze Membership: Delivers essential benefits and services at a low cost. Ideal for individuals or small businesses seeking basic access to resources and networking opportunities.",
+                            silver: "Silver Membership: Offers additional advantages and improved services compared to the Bronze level. This mid-tier membership is perfect for those looking for more comprehensive support and greater community engagement.",
+                            gold: "Gold Membership: The top-tier membership level, providing the widest range of benefits and exclusive services. This option is ideal for individuals seeking maximum access to resources, premium support, and elite networking opportunities."
+                        };
+                    
+                        document.getElementById("membership").addEventListener("change", function() {
+                            const selectedValue = this.value;
+                            const detailsSection = document.getElementById("details-memberships");
+                            
+                            detailsSection.innerHTML = "";
+                    
+                            if (selectedValue && membershipInfo[selectedValue]) {
+                                detailsSection.innerHTML = `<p>${membershipInfo[selectedValue]}</p>`;
+                            }
+                        });
+                    </script></section>
+           
         </section>
+                </fieldset>
+        
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" id="button-submit" name="submit" value="Join">
+            </form>
+        </div>
+        
     </main>
 
     <footer>
@@ -103,5 +137,6 @@
     <script src="scripts/weather.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/spotlight.js"></script>
+    <script src="scripts/join.js"></script>
 </body>
 </html>

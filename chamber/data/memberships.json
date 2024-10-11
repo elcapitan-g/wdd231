@@ -1,0 +1,24 @@
+{
+    "memberships": [
+        {
+            "name": "NP Membership",
+            "description": "Tailored for non-profit organizations, this membership is free and provides fundamental access to resources and support for charitable entities.",
+            "image": "images/memberships/np-badge.webp"
+        },
+        {
+            "name": "Bronze Membership",
+            "description": "Delivers essential benefits and services at a low cost. Ideal for individuals or small businesses seeking basic access to resources and networking opportunities.",
+            "image": "images/memberships/bronze-badge.webp"
+        },
+        {
+            "name": "Silver Membership",
+            "description": "Offers additional advantages and improved services compared to the Bronze level. This mid-tier membership is perfect for those looking for more comprehensive support and greater community engagement.",
+            "image": "images/memberships/silver-badge.webp"
+        },
+        {
+            "name": "Gold Membership",
+            "description": "The top-tier membership level, providing the widest range of benefits and exclusive services. This option is ideal for individuals seeking maximum access to resources, premium support, and elite networking opportunities.",
+            "image": "images/memberships/gold-badge.webp"
+        }
+    ]
+}

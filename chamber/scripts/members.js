@@ -2,9 +2,26 @@ const directoryList = document.querySelector('#member-directory');
 const gridButton = document.querySelector('#grid-button');
 const listButton = document.querySelector('#list-button'); 
 const imgBase = 'images/';
+const directortList = document.querySelectorAll('.member-directory');
 const membersURL = 'data/members.json';
 
+async function getMembers() {
+    const response = await fetch(membersURL);
+    const data = await response.json();
+    displaySpotlights(data);
+}
 
+
+async function getMembers() {
+    try {
+        const response = await fetch(membersURL);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        displayMembers(data.members);
+    } catch (error) {
+        console.error('Error fetching members:', error);
+    }
+}
 
 function displayMembers(data) {
     directoryList.innerHTML = "";
@@ -34,7 +51,7 @@ function displayMembers(data) {
             company.innerHTML = `
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
-                <a href=https://${member.website}>${member.website}</a>
+                <a href="https://${member.website}" target="_blank">${member.website}</a>
                 <p>${member.phone}</p>
                 <p>${member.business}</p>
                 <p>${member.memberLevel}</p>
@@ -44,17 +61,17 @@ function displayMembers(data) {
     }
 }
 
-
-gridButton.addEventListener('click', ()=> {
+gridButton.addEventListener('click', () => {
     listButton.classList.remove('active');
     gridButton.classList.add('active');
     getMembers();
 });
 
-listButton.addEventListener('click', ()=> {
+listButton.addEventListener('click', () => {
     listButton.classList.add('active');
     gridButton.classList.remove('active');
     getMembers();
 });
 
+// Initial fetch
 getMembers();

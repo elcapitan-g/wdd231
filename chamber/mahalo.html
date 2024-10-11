@@ -11,12 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../favicon.ico">
-    <script src="scripts/members.js"></script>
+    <link rel="icon" href="image/favicon.ico">
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Chamber of Commerce members directory">
-    <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/chamber/index.html">
 
 </head>
 <body>
@@ -35,17 +34,17 @@
         </ul>
     </nav>
 </header>
-<main class="directory-main">
-    <h2 class="directory-header">Member Directory</h2>
+    <main >
+            <section class="current-events">
+                <h2>Mahalo Nui Loa!</h2>
+                <img src="images/mahalo.webp" alt=" Picture of Waimea Town" width="500" height="200" loading="lazy">
+                <p id="current-paragraph">You've successfully joined, please look forward to an email with further instructions. </p>
+            </section>
+    
+        </div>
 
-    <div class="directory-buttons">
-        <button id="grid-button" class="active button"><img src="images/menu.png" alt="menu button icon" width="44" height="44" title="menu button"></button>
-        <button id="list-button" class="button"><img src="images/list.png" alt="list button icon" width="44" height="44" title="list button"></button>
-    </div>
-
-    <div id="member-directory" class="grid"></div>
-</main>
-
+        
+    </main>
 
     <footer>
         <div class="footer-top">
@@ -59,7 +58,7 @@
                     64-1032 Mamalahoa Hwy,<br>
                     Waimea, Hawaii<br>
                     96743<br>
-                    <br>Phone: <a href="tel:1234567890">(808) 123-4567</a>
+                    <br>Phone: <a href="tel:1234567890">(123) 456-7890</a>
                 </address>
             </div>
 
@@ -73,10 +72,10 @@
         <p>&copy; <span id="currentYear"></span> 🤙 Gerald Newell 🤙 Hawaii, USA</p>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/members.js" defer></script>
-    <script src="scripts/dates.js"></script>
+
+    <script src="../scripts/dates.js"></script>
+    <script src="scripts/weather.js"></script>
     <script src="scripts/hamburger.js"></script>
-   
-    
+    <script src="scripts/spotlight.js"></script>
 </body>
 </html>
