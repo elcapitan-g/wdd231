@@ -39,7 +39,7 @@ class VisitInfo {
             messageAlert.textContent = `E como mai! Please let us know if you have any questions!`;
         } else {
             if (this.differenceDays < 1) {
-                messageAlert.textContent = `Aloha! Great to see you!!`;
+                messageAlert.textContent = `Aloha! Great to see you so soon!!`;
             } else {
                 messageAlert.textContent = `You last visited us ${this.differenceDays} day${this.differenceDays > 1 ? 's' : ''} ago.`;
             }
@@ -58,9 +58,6 @@ const visitation = new VisitInfo();
 visitation.handleVisit();
 
 
-const dataUrl = "https://raw.githubusercontent.com/elcapitan-g/wdd231/main/chamber/data/collage.json";
-const spaceForCollage = document.querySelector('.collage');
-
 async function getDataForCollage() {
     try {
         const response = await fetch(dataUrl);
@@ -74,6 +71,24 @@ async function getDataForCollage() {
         console.error('Error with the data JSON', error);
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll("img.lazy");
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        imageObserver.observe(image);
+    });
+});
 
 function displayCollage(images, space) {
     if (!images || images.length === 0) {
@@ -103,3 +118,66 @@ function displayCollage(images, space) {
 }
 
 getDataForCollage();
+const container = document.getElementById('container');
+container.style.display = 'grid';
+container.style.gridTemplateColumns = '1fr 3fr';
+container.style.gap = '20px';
+
+const sidebarContent = document.getElementById('sidebar-content');
+sidebarContent.style.padding = '20px';
+sidebarContent.style.backgroundColor = '#f4f4f4';
+sidebarContent.style.borderRadius = '5px';
+
+const gallery = document.getElementById('gallery');
+gallery.style.display = 'grid';
+gallery.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
+gallery.style.gap = '10px';
+
+// Lazy loading images
+const lazyImages = document.querySelectorAll('img.lazy');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+        }
+    });
+});
+
+lazyImages.forEach(image => {
+    imageObserver.observe(image);
+});
+
+
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+function handleMediaQuery(e) {
+    if (e.matches) {
+        container.style.gridTemplateColumns = '1fr';
+    } else {
+        container.style.gridTemplateColumns = '1fr 3fr';
+    }
+}
+mediaQuery.addEventListener('change', handleMediaQuery);
+handleMediaQuery(mediaQuery); 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('.lazy');
+
+    const loadImages = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(loadImages);
+    lazyImages.forEach(img => {
+        observer.observe(img);
+    });
+});
