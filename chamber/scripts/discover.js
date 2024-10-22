@@ -38,32 +38,25 @@ class VisitInfo {
         if (this.counter === 1) {
             messageAlert.textContent = `E como mai! Please let us know if you have any questions!`;
         } else {
-            if (this.differenceDays < 1) {
-                messageAlert.textContent = `Aloha! Great to see you so soon!!`;
-            } else {
-                messageAlert.textContent = `You last visited us ${this.differenceDays} day${this.differenceDays > 1 ? 's' : ''} ago.`;
-            }
+            messageAlert.textContent = this.differenceDays < 1
+                ? `Aloha! Great to see you so soon!!`
+                : `You last visited us ${this.differenceDays} day${this.differenceDays > 1 ? 's' : ''} ago.`;
         }
     }
 
     handleVisit() {
-        this.updateCounter();   
+        this.updateCounter();
         this.updateMessage();
-        console.log(this.lastVisitDate);
-        console.log(this.counter);
     }
 }
 
 const visitation = new VisitInfo();
 visitation.handleVisit();
 
-
 async function getDataForCollage() {
     try {
         const response = await fetch(dataUrl);
-        if (!response.ok) {
-            throw new Error('Error fetching data: ' + response.statusText);
-        }
+        if (!response.ok) throw new Error('Error fetching data: ' + response.statusText);
         const objectData = await response.json();
         displayCollage(objectData.collage, spaceForCollage);
     } catch (error) {
@@ -71,24 +64,6 @@ async function getDataForCollage() {
         console.error('Error with the data JSON', error);
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const lazyImages = document.querySelectorAll("img.lazy");
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove("lazy");
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    lazyImages.forEach(image => {
-        imageObserver.observe(image);
-    });
-});
 
 function displayCollage(images, space) {
     if (!images || images.length === 0) {
@@ -101,23 +76,23 @@ function displayCollage(images, space) {
         const image = document.createElement('img');
         const caption = document.createElement('figcaption');
 
-        image.setAttribute("src", element.link);
-        image.setAttribute("alt", element.name || 'Image');
-        image.setAttribute("loading", "lazy");
-        image.setAttribute("width", "300");
-        image.setAttribute("height", "300");
-        image.setAttribute("class", "moving style-image");
+        image.src = element.link;
+        image.alt = element.name || 'Image';
+        image.loading = "lazy";
+        image.width = 300;
+        image.height = 300;
+        image.className = "moving style-image";
 
         caption.textContent = element.description;
 
-        card.setAttribute("class", "fig-images");
-        card.appendChild(image);
-        card.appendChild(caption);
+        card.className = "fig-images";
+        card.append(image, caption);
         space.appendChild(card);
     });
 }
 
 getDataForCollage();
+
 const container = document.getElementById('container');
 container.style.display = 'grid';
 container.style.gridTemplateColumns = '1fr 3fr';
@@ -133,7 +108,6 @@ gallery.style.display = 'grid';
 gallery.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
 gallery.style.gap = '10px';
 
-// Lazy loading images
 const lazyImages = document.querySelectorAll('img.lazy');
 const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -150,34 +124,9 @@ lazyImages.forEach(image => {
     imageObserver.observe(image);
 });
 
-
 const mediaQuery = window.matchMedia('(max-width: 768px)');
 function handleMediaQuery(e) {
-    if (e.matches) {
-        container.style.gridTemplateColumns = '1fr';
-    } else {
-        container.style.gridTemplateColumns = '1fr 3fr';
-    }
+    container.style.gridTemplateColumns = e.matches ? '1fr' : '1fr 3fr';
 }
 mediaQuery.addEventListener('change', handleMediaQuery);
-handleMediaQuery(mediaQuery); 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll('.lazy');
-
-    const loadImages = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                observer.unobserve(img);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(loadImages);
-    lazyImages.forEach(img => {
-        observer.observe(img);
-    });
-});
+handleMediaQuery(mediaQuery);
