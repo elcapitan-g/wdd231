@@ -201,3 +201,187 @@
     display: block;
     margin: 20px auto; 
 }
+.invisible-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to stack */
+    margin: 0 -10px; /* Negative margin for equal spacing */
+}
+
+.column {
+    flex: 1 1 50%; /* Each column takes up 50% of the width */
+    padding: 0 10px; /* Internal padding for columns */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.section {
+    margin-bottom: 20px; /* Spacing between sections */
+    background: transparent; /* Make it invisible */
+    padding: 10px; /* Optional internal padding */
+}
+
+.responsive-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%; /* Stacks columns on small screens */
+    }
+}
+.centered-heading {
+    text-align: center; /* Centers the text */
+    margin: 20px 0; /* Optional margin for spacing */
+}
+.filter-options {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Increased max width for larger images */
+}
+
+.info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .gallery-item:hover .info {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .info {
+        display: block;
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background-image: url('.../images/home.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 80vh; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #9cbbff; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0655ff; /* Darker on hover */
+}
+
+.three-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.column {
+    flex: 1 1 300px; /* Responsive columns */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for columns */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.column:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    width: 100%; /* Responsive banner image */
+    max-width: 1200px; /* Limit the max width */
+    border-radius: 8px; /* Round corners */
+}
+
+.info-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.info-column {
+    flex: 1 1 300px; /* Responsive info columns */
+    margin: 10px;
+    padding: 20px;
+    background-color: #e9e9e9; /* Light background for info columns */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .three-columns,
+    .info-columns {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center;
+    }
+
+    .column, .info-column {
+        flex: 1 1 auto; /* Allow flexibility */
+        margin: 10px 0; /* Vertical spacing */
+    }
+}

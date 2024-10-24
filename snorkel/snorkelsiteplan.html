@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waimea Town Chamber of Commerce</title>
+    <title>Kawaihae Snorkel Club</title>
     <meta name="author" content="Gerald Newell">
-    <meta name="description" content="The home page for Waimea Town Chamber of Commerce">
+    <meta name="description" content="The home page for Kawaihae Snorkel Club">
     <link rel="stylesheet" href="styles/snorkel.css">
     <link rel="stylesheet" href="styles/snorkel-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +27,11 @@
     
     <nav>
         <ul class="navLinks">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Reefs</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">About </a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="reefs.html">Reefs</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About </a></li>
         </ul>
     </nav>
 <body></header>
@@ -86,10 +86,32 @@
         <h3>Mobile Home Page Wireframes</h3>
         <img src="images/mobilewf1.png" alt="Mobile Site Home Page Wireframe" class="responsive-image"> </main>
 
-    <footer>
-        <p>&copy; <span id="copyright-year"></span> 🤙 Gerald Newell 🤙 Kawaihae, Hawaii</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-    </footer>
+        <footer>
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo" width="100" height="100">
+                </div>
+    
+                <div class="contact-section">
+                    <h3><strong>Kawaihae Snorkel Club</strong></h3>
+                    <address>
+                        Kawaiahe Harbor - Kawaihae Rd<br>
+                        Waimea, Hawaii<br>
+                        96743<br>
+                        <br>Phone: <a href="tel:1234567890">(123) 456-7890</a>
+                    </address>
+                </div>
+    
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank"><img src="images/face.webp" alt="Facebook" width="60" height="60"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.webp" alt="X " width="60" height="60"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/insta.webp" alt="Instagram" width="60" height="60"></a>
+                </div>
+            </div>
+    
+            <p>&copy; <span id="currentYear"></span> 🤙 Gerald Newell 🤙 Hawaii, USA</p>
+            <p id="lastModified"></p>
+        </footer>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/join.js" defer></script>

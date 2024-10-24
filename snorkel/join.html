@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaihae Snorkel Club</title>
+    <meta name="author" content="Gerald Newell">
+    <meta name="description" content="The home page for Kawaihae Snorkel Club">
+    <link rel="stylesheet" href="styles/snorkel.css">
+    <link rel="stylesheet" href="styles/snorkel-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/favicon.ico">
+    <meta property="og:title" content="Kawaihae Snorkel Club">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Kawaihae Snorkel Club">
+    <meta property="og:url" content="https://elcapitan-g.github.io/wdd231/snorkel/snorkelsiteplan.html">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" width="35" height="35">
+        <h1>Kawaihae Snorkel Club</h1>
+        <button id="hamburgerMenu" title="Menu button"></button>
+   
+    
+    <nav>
+        <ul class="navLinks">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="reefs.html">Reefs</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About </a></li>
+        </ul>
+    </nav>
+<body></header>
+    <main>
+        <h2>Join the Kawaihae Snorkel Club!</h2>
+        <div class="container">
+            <div class="left-column">
+                <img src="images/join.webp" 
+                     alt="Description of the image" 
+                     loading="lazy" 
+                     class="responsive-image">
+            </div>
+            <div id="form" class="right-column">
+                <form method="get" class="form1" action="mahalo.html">
+                    <fieldset id="personal-information">
+                        <legend>Personal Information</legend>
+                        <label class="required" for="first-name">First Name:</label>
+                        <input type="text" autocomplete="given-name" name="first-name" id="first-name" required title="First Name">
+            
+                        <label class="required" for="last-name">Last Name:</label>
+                        <input type="text" autocomplete="family-name" name="last-name" id="last-name" required title="Last Name">
+                        <br>
+                        <label class="required" for="email">Email Address:</label>
+                        <input type="email" autocomplete="email" name="email" id="email" required placeholder="example@gmail.com" title="Your Email Address">
+            
+                        <label class="required" for="phone-number">Phone Number:</label>
+                        <input type="tel" autocomplete="tel" name="phone-number" id="phone-number" required placeholder="+(808) 123-4567" title="Your phone Number with country code">
+                    </fieldset>
+            
+                    <fieldset id="snorkel-information">
+                        <legend>Snorkel Information</legend>
+                        <label class="required" for="organizational-title">Organization Title:</label>
+                        <input type="text" id="organizational-title" name="organizational-title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" title="Only accepts alpha characters, hyphens, and spaces with a minimum of seven characters" required>
+                        <br>
+                        <label class="required" for="business-name">Business or Organization Name:</label>
+                        <input type="text" id="business-name" name="business-name" autocomplete="organization" title="Name of the Organization" required>
+                        <br>
+                        <label for="description-business">Description:</label>
+                        <textarea title="Description of the business" name="description-business" id="description-business" placeholder="Brief Description"></textarea>
+                    </fieldset>
+            
+                    <fieldset id="membership-level">
+                        <legend>Snorkel Experience</legend>
+                        <label class="required" for="membership">Choose your snorkeling level:</label>
+                        <select id="membership" name="membership" title="Membership Levels">
+                            <option value="">--Please choose an option--</option>
+                            <optgroup label="Membership Levels">
+                                <option value="np">Non-swimmer</option>
+                                <option value="bronze">Beginner</option>
+                                <option value="silver">Advanced</option>
+                                <option value="gold">Master</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+            
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <input type="submit" id="button-submit" name="submit" value="Join">
+                </form>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        <div class="footer-top">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo" width="100" height="100">
+            </div>
+
+            <div class="contact-section">
+                <h3><strong>Waimea Town Chamber of Commerce</strong></h3>
+                <address>
+                    64-1032 Mamalahoa Hwy,<br>
+                    Waimea, Hawaii<br>
+                    96743<br>
+                    <br>Phone: <a href="tel:1234567890">(123) 456-7890</a>
+                </address>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/face.webp" alt="Facebook" width="60" height="60"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.webp" alt="X " width="60" height="60"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/insta.webp" alt="Instagram" width="60" height="60"></a>
+            </div>
+        </div>
+
+        <p>&copy; <span id="currentYear"></span> 🤙 Gerald Newell 🤙 Hawaii, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="../scripts/dates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/spotlight.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+</html>
