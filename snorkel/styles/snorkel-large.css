@@ -194,6 +194,7 @@
         background-color: #00171F;
     }
 }
+
 .responsive-image {
     width: 100%;
     height: auto;
@@ -201,38 +202,41 @@
     display: block;
     margin: 20px auto; 
 }
+
 .invisible-container {
     display: flex;
-    flex-wrap: wrap; /* Allows sections to stack */
-    margin: 0 -10px; /* Negative margin for equal spacing */
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
 
 .column {
-    flex: 1 1 50%; /* Each column takes up 50% of the width */
-    padding: 0 10px; /* Internal padding for columns */
-    box-sizing: border-box; /* Ensures padding is included in width */
+    flex: 1 1 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .section {
-    margin-bottom: 20px; /* Spacing between sections */
-    background: transparent; /* Make it invisible */
-    padding: 10px; /* Optional internal padding */
+    margin-bottom: 20px;
+    background: transparent;
+    padding: 10px;
 }
 
 .responsive-image {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
     .column {
-        flex: 1 1 100%; /* Stacks columns on small screens */
+        flex: 1 1 100%;
     }
 }
+
 .centered-heading {
-    text-align: center; /* Centers the text */
-    margin: 20px 0; /* Optional margin for spacing */
+    text-align: center;
+    margin: 20px 0;
 }
+
 .filter-options {
     text-align: center;
     margin-bottom: 20px;
@@ -252,7 +256,7 @@
 .gallery-item img {
     width: 100%;
     height: auto;
-    max-width: 300px; /* Increased max width for larger images */
+    max-width: 300px;
 }
 
 .info {
@@ -278,6 +282,7 @@
         display: block;
     }
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -290,21 +295,29 @@ body {
 }
 
 .hero {
-    background-image: url('.../images/home.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 80vh; 
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    color: white;
-    text-align: center;
     position: relative;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    text-align: center;
 }
 
 .cta-button {
@@ -319,7 +332,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #0655ff; /* Darker on hover */
+    background-color: #0655ff;
 }
 
 .three-columns {
@@ -330,18 +343,18 @@ body {
 }
 
 .column {
-    flex: 1 1 300px; /* Responsive columns */
+    flex: 1 1 300px;
     margin: 10px;
     padding: 20px;
-    background-color: #f4f4f4; /* Light background for columns */
+    background-color: #f4f4f4;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
 }
 
 .column:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
 }
 
 .banner {
@@ -350,9 +363,9 @@ body {
 }
 
 .banner img {
-    width: 100%; /* Responsive banner image */
-    max-width: 1200px; /* Limit the max width */
-    border-radius: 8px; /* Round corners */
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
 }
 
 .info-columns {
@@ -363,25 +376,24 @@ body {
 }
 
 .info-column {
-    flex: 1 1 300px; /* Responsive info columns */
+    flex: 1 1 300px;
     margin: 10px;
     padding: 20px;
-    background-color: #e9e9e9; /* Light background for info columns */
-    border-radius: 8px; /* Round corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .three-columns,
     .info-columns {
-        flex-direction: column; /* Stack columns on smaller screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .column, .info-column {
-        flex: 1 1 auto; /* Allow flexibility */
-        margin: 10px 0; /* Vertical spacing */
+        flex: 1 1 auto;
+        margin: 10px 0;
     }
 }

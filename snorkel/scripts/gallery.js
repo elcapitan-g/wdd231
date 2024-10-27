@@ -9,7 +9,7 @@ function filterGallery(category) {
     });
 }
 
-// Lazy loading images
+
 document.addEventListener("DOMContentLoaded", function() {
     const lazyloadImages = document.querySelectorAll("img.lazyload");
     
@@ -30,5 +30,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", lazyload);
     window.addEventListener("resize", lazyload);
     window.addEventListener("orientationchange", lazyload);
-    lazyload(); // Run lazyload on initial load
+    lazyload(); 
 });
